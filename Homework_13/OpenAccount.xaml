@@ -1,0 +1,32 @@
+﻿<Window x:Class="Homework_13.OpenAccount"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Homework_13"
+        mc:Ignorable="d"
+        Title="OpenAccount" Height="200" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Выберите тип счёта:">
+            <StackPanel>
+                <RadioButton x:Name="radiobtnDeposit" IsThreeState="False" Content="Депозит"/>
+                <RadioButton x:Name="radiobtnSaving" IsThreeState="False" Content="Сберегательный счёт"/>
+            </StackPanel>
+        </GroupBox>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Введите начальную сумму:"/>
+            <TextBox x:Name="tboxStartBalance" PreviewTextInput="tboxStartBalance_PreviewTextInput"/>
+            <TextBlock/>
+            <WrapPanel>
+                <Button x:Name="btnCancel" Content="Отмена"/>
+                <TextBox Width="50"></TextBox>
+                <Button x:Name="btnAdd" Content="Добавить" Click="btnAdd_Click"/>
+                
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Window>
